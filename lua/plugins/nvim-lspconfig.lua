@@ -10,6 +10,7 @@ return {
     { 'williamboman/mason.nvim' },
     -- https://github.com/williamboman/mason-lspconfig.nvim
     { 'williamboman/mason-lspconfig.nvim' },
+    { 'neovim/nvim-lspconfig', opts = {} },
 
     -- Auto-Install LSPs, linters, formatters, debuggers
     -- https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim
@@ -21,7 +22,11 @@ return {
 
     -- Additional lua configuration, makes nvim stuff amazing!
     -- https://github.com/folke/neodev.nvim
-    { 'folke/neodev.nvim', opts = {} },
+    {
+      "pmizio/typescript-tools.nvim",
+      dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+      opts = {},
+    },
   },
   config = function ()
     require('mason').setup()
@@ -36,9 +41,7 @@ return {
         'lua_ls',
         'jdtls',
         'jsonls',
-        'lemminx',
         'marksman',
-        'quick_lint_js',
         'yamlls',
       }
     })
