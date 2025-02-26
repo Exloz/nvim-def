@@ -24,13 +24,19 @@ require("lazy").setup("plugins", {
 })
 
 -- These modules are not loaded by lazy
--- require("cmp").setup {
---   formatting = {
---     format = require("nvim-highlight-colors").format,
---   },
--- }
+require("cmp").setup {
+  formatting = {
+    format = require("nvim-highlight-colors").format,
+  },
+}
 require("core.options")
 require("core.keymaps")
+
+vim.opt.termguicolors = true
+vim.cmd("hi Normal guibg=none")
+vim.cmd("hi NormalFloat guibg=none")
+vim.cmd("hi LineNr guibg=none")
+vim.cmd("hi SignColum guibg=none")
 
 vim.opt.shell = 'pwsh'
 vim.opt.shellcmdflag = '-nologo -noprofile -ExecutionPolicy RemoteSigned -command'

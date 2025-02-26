@@ -137,6 +137,7 @@ local config = {
 config["on_attach"] = function(client, bufnr)
   jdtls.setup_dap({ hotcodereplace = "auto" })
   require("jdtls.dap").setup_dap_main_class_configs()
+  require("jdtls.setup").find_root({ ".git", "mvnw", "pom.xml", "build.gradle" })
 end
 
 jdtls.start_or_attach(config)
