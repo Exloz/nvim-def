@@ -22,7 +22,7 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- Cursor Line
-opt.cursorline = true
+opt.cursorline = false
 
 -- Appearance
 opt.termguicolors = true
