@@ -40,6 +40,7 @@ return {
         -- Grep
         { "<C-f>", function() Snacks.picker.lines() end, desc = "Buffer Lines" },
         { "<leader>sB", function() Snacks.picker.grep_buffers() end, desc = "Grep Open Buffers" },
+        { "<leader>gg", function() Snacks.picker.grep({ search_dirs = vim.fn.systemlist("git ls-files") }) end, desc = "Grep in Git Files" },
         { "<leader>sw", function() Snacks.picker.grep_word() end, desc = "Visual selection or word", mode = { "n", "x" } },
         -- search
         { "<leader>sC", function() Snacks.picker.commands() end, desc = "Commands" },
@@ -49,6 +50,11 @@ return {
         { "<leader>sm", function() Snacks.picker.marks() end, desc = "Marks" },
         { "<leader>sq", function() Snacks.picker.qflist() end, desc = "Quickfix List" },
         -- LSP
+        { "\\", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
+        { "<C-\\>", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" },
+        { "<leader>r", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
+        { "<leader>i", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementation" },
+        { "<leader>t", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" },
         { "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
         -- Other
         { "<leader>.",  function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
