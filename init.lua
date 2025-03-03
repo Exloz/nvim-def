@@ -41,3 +41,4 @@ vim.cmd("hi SignColum guibg=none")
 vim.opt.shell = 'pwsh'
 vim.opt.shellcmdflag = '-nologo -noprofile -ExecutionPolicy RemoteSigned -command'
 vim.opt.shellxquote = ''
+
