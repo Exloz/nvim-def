@@ -32,6 +32,7 @@ require("cmp").setup {
 }
 require("core.options")
 require("core.keymaps")
+require('leap').create_default_mappings()
 
 vim.opt.termguicolors = true
 vim.cmd("hi Normal guibg=none")
