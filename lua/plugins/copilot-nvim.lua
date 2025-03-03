@@ -10,9 +10,9 @@ return {
                 keymap = {
                     jump_prev = "[[",
                     jump_next = "]]",
-                    accept = "<CR>",
+                    accept = "<cr>",
                     refresh = "gr",
-                    open = "<M-CR>"
+                    open = "<m-cr>"
                 },
                 layout = {
                     position = "bottom", -- | top | left | right | horizontal | vertical
@@ -21,16 +21,16 @@ return {
             },
             suggestion = {
                 enabled = true,
-                auto_trigger = false,
+                auto_trigger = true,
                 hide_during_completion = true,
                 debounce = 75,
                 keymap = {
-                    accept = "<M-l>",
+                    accept = "<m-y>",
                     accept_word = false,
                     accept_line = false,
-                    next = "<M-]>",
-                    prev = "<M-[>",
-                    dismiss = "<C-]>",
+                    next = "<m-]>",
+                    prev = "<m-[>",
+                    dismiss = "<c-]>",
                 },
             },
             filetypes = {
@@ -44,7 +44,7 @@ return {
                 cvs = false,
                 ["."] = false,
             },
-            copilot_node_command = 'node', -- Node.js version must be > 18.x
+            copilot_node_command = 'node', -- node.js version must be > 18.x
             server_opts_overrides = {},
         })
     end,
